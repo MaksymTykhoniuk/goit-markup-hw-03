@@ -1,17 +1,22 @@
 :root {
-	--grey: #757575;
-	--white: #ffffff;
-	--black: #212121;
-	--accent: #2196f3;
-	--background: #2f303a;
+	--main-text-color: #757575;
+	--background-color: #ffffff;
+	--secondary-background-color: #f5f4fa;
+	--main-black-color: #212121;
+	--seconadary-black-color: #000000;
+	--accent-color: #2196f3;
+	--hover-accent-color: #1f84d7;
+	--footer-background-color: #2f303a;
+	--button-bgc-color: #eeeeee;
+	--header-border-color: #ececec;
 }
 
 body {
-	color: var(--grey);
+	color: var(--main-text-color);
 	font-family: "Roboto", sans-serif;
-	font-weight: 400;
 	font-size: 14px;
 	letter-spacing: 0.03em;
+	background-color: var(--background-color);
 }
 
 ul {
@@ -51,10 +56,24 @@ img {
 	padding-top: 0;
 }
 
+.visual-hiden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 /* навигация */
 
 .header {
-	border-bottom: 1px solid #ececec;
+	border-bottom: 1px solid var(--header-border-color);
 }
 
 .site-nav {
@@ -68,7 +87,7 @@ img {
 }
 
 .logo {
-	color: var(--black);
+	color: var(--seconadary-black-color);
 
 	font-family: "Raleway";
 	font-weight: 700;
@@ -84,7 +103,7 @@ img {
 }
 
 .accent-logo {
-	color: var(--accent);
+	color: var(--accent-color);
 }
 
 .site-menu {
@@ -99,7 +118,7 @@ img {
 }
 
 .site-menu .link {
-	color: var(--black);
+	color: var(--main-black-color);
 
 	font-weight: 500;
 	font-size: 14px;
@@ -110,15 +129,15 @@ img {
 
 .site-menu .link:hover,
 .site-menu .link:focus {
-	color: var(--accent);
+	color: var(--accent-color);
 }
 
 .site-menu .link.current {
-	color: var(--accent);
+	color: var(--accent-color);
 }
 
 .contact-list .link {
-	color: var(--grey);
+	color: var(--main-text-color);
 
 	font-weight: 500;
 	font-size: 14px;
@@ -129,7 +148,7 @@ img {
 
 .contact-list .link:hover,
 .contact-list .link:focus {
-	color: var(--accent);
+	color: var(--accent-color);
 }
 
 .contact-list {
@@ -144,13 +163,13 @@ img {
 /* герой index.html */
 
 .hero {
-	background-color: var(--background);
+	background-color: var(--footer-background-color);
 	padding-top: 200px;
 	padding-bottom: 200px;
 }
 
 .hero-title {
-	color: var(--white);
+	color: var(--background-color);
 
 	font-weight: 900;
 	font-size: 44px;
@@ -164,8 +183,8 @@ img {
 }
 
 .hero .button {
-	color: var(--white);
-	background-color: var(--accent);
+	color: var(--background-color);
+	background-color: var(--accent-color);
 
 	font-family: inherit;
 	font-weight: 700;
@@ -187,23 +206,10 @@ img {
 
 .hero .button:hover,
 .hero .button:focus {
-	background-color: #1f84d7;
+	background-color: var(--hover-accent-color);
 }
 
 /* преимущества */
-.visual-hiden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
 
 .benefits {
 	display: flex;
@@ -215,7 +221,7 @@ img {
 	margin-right: 30px;
 }
 .benefits-title {
-	color: var(--black);
+	color: var(--main-black-color);
 
 	font-weight: 700;
 	font-size: 14px;
@@ -227,7 +233,7 @@ img {
 }
 
 .benefits-text {
-	color: var(--grey);
+	color: var(--main-text-color);
 
 	font-size: 14px;
 	line-height: 1.7;
@@ -238,7 +244,7 @@ img {
 
 .work-title,
 .team-title {
-	color: var(--black);
+	color: var(--main-black-color);
 
 	font-weight: 700;
 	font-size: 36px;
@@ -260,11 +266,11 @@ img {
 /* команда */
 
 .section.team {
-	background-color: #f5f4fa;
+	background-color: var(--secondary-background-color);
 }
 
 .team-subtitle {
-	color: var(--black);
+	color: var(--main-black-color);
 
 	font-weight: 500;
 	font-size: 16px;
@@ -277,7 +283,7 @@ img {
 }
 
 .team-text {
-	color: var(--grey);
+	color: var(--main-text-color);
 
 	font-size: 16px;
 	line-height: 1.2;
@@ -315,7 +321,8 @@ img {
 }
 
 .buttons-list .button {
-	color: var(--black);
+	color: var(--main-black-color);
+	background-color: var(--button-bgc-color);
 
 	font-family: inherit;
 	font-style: normal;
@@ -333,13 +340,13 @@ img {
 
 .buttons-list .button:hover,
 .buttons-list .button:focus {
-	color: var(--white);
-	background-color: var(--accent);
+	color: var(--background-color);
+	background-color: var(--accent-color);
 }
 
 .buttons-list .button.current {
-	color: var(--white);
-	background-color: var(--accent);
+	color: var(--background-color);
+	background-color: var(--accent-color);
 }
 
 .galery {
@@ -348,7 +355,7 @@ img {
 }
 
 .galery-card {
-	border: 1px solid #eeeeee;
+	border: 1px solid var(--button-bgc-color);
 	width: calc((100% - 60px) / 3);
 	margin-right: 30px;
 	margin-bottom: 30px;
@@ -362,7 +369,7 @@ img {
 	margin-bottom: 0;
 }
 .galery-card h2 {
-	color: var(--black);
+	color: var(--main-black-color);
 
 	font-weight: 700;
 	font-size: 18px;
@@ -371,7 +378,7 @@ img {
 }
 
 .galery-card p {
-	color: var(--grey);
+	color: var(--main-text-color);
 
 	font-size: 16px;
 	line-height: 1.8;
@@ -385,26 +392,32 @@ img {
 /* подвал */
 
 .footer {
-	background-color: var(--background);
+	background-color: var(--footer-background-color);
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
 
 .footer .logo {
-	color: var(--white);
+	color: var(--background-color);
 
 	display: inline-block;
 	padding: 0;
 	margin-bottom: 20px;
 }
 .footer-address {
-	color: var(--white);
+	color: var(--background-color);
 
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.7;
 	letter-spacing: 0.03em;
+	text-decoration: none;
+}
+
+.footer-address:hover,
+.footer-address:focus {
+	color: var(--accent-color);
 }
 
 .footer-link {
@@ -423,5 +436,5 @@ img {
 
 .footer-link:hover,
 .footer-link:focus {
-	color: var(--accent);
+	color: var(--accent-color);
 }
