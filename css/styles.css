@@ -70,7 +70,7 @@ img {
 	overflow: hidden;
 }
 
-/* навигация */
+/* хедер */
 
 .header {
 	border-bottom: 1px solid var(--header-border-color);
@@ -209,7 +209,7 @@ img {
 	background-color: var(--hover-accent-color);
 }
 
-/* преимущества */
+/* переваги */
 
 .benefits {
 	display: flex;
@@ -240,7 +240,7 @@ img {
 	letter-spacing: 0.03em;
 }
 
-/* чем мы занимаемся */
+/* чим ми займаємося */
 
 .work-title,
 .team-title {
@@ -293,16 +293,17 @@ img {
 
 .team-list {
 	display: flex;
-	width: 270px;
 }
 
 .team-list > .card {
+	width: 270px;
+
 	background-color: #ffffff;
 
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 0px 0px 4px 4px;
-
+	border-radius: 4px;
 	padding-bottom: 30px;
+	overflow: hidden;
 }
 
 .team-list .card:not(:last-child) {
@@ -389,7 +390,7 @@ img {
 	padding: 20px 24px;
 }
 
-/* подвал */
+/* футер */
 
 .footer {
 	background-color: var(--footer-background-color);
